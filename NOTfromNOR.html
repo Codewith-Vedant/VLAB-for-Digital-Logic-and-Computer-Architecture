@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOT Gate from Combination of NOR Gates</title>
+</head>
+<style>
+    body {
+font-family: Arial, sans-serif;
+background-color: #f2f2f2;
+margin: 0;
+
+}
+    .red-style{
+    background-color: brown; /* Red color for the top strip */
+    height: 150px; /* Height of the strip */
+    width: 100vw; /* 100% of the viewport width */
+    margin: 0; /* Remove margin to cover entire width */
+    padding: 0; /* Remove padding to cover entire width */
+    text-align: center;
+    position: absolute;
+}
+    h1 {
+    text-align: left;
+    }
+    .red-strip {
+        background-color: brown; /* Red color for the top strip */
+                height: 220px; /* Height of the strip */
+                width: 100vw; /* 100% of the viewport width */
+                margin: 0; /* Remove margin to cover entire width */
+                padding: 0; /* Remove padding to cover entire width */
+    }
+    .tab {
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+    border-radius: 111px;
+    transition: background-color 0.3s ease;
+    }
+    .tab1{
+        color: coral;
+    text-decoration: none;
+    padding: 20px 20px;
+    border-radius: 111px;
+    transition: background-color 0.3s ease;
+    background-color: brown;
+    box-shadow: 10px 10px;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    .tab:hover {
+    background-color: #900; /* Change the color on hover */
+    }
+</style>
+<body>
+    <div class="red-strip">
+        <img src="./Somaiya1.png" width="300" height="100">
+        <img src="./Trust.png" width="100" height="70" style="position: absolute;left: 93.5%;"><br><br>
+        <a href="./Dashboard.html" class="tab">Home</a>
+        &nbsp;
+        <a href="./AboutUs.html" class="tab">About Us</a>
+        <br><br><br>
+        <a href="./simulator.html" class="tab">Back to Experiment</a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="position: absolute; left: 30%; top: 30%;">
+    <div>
+    <p>A:</p>
+    <input type="number" id="a">
+    <input type="button" id="btn1" value="Enter">
+    </div>
+    <br>
+    <br>
+    <img src="./NORSim.png" width="300" height="200">
+    <div>
+    <p>Y:</p>
+    <p type="text" id="Y"></p>
+    </div>
+    <table id="outputTable" border="1">
+        <tr>
+            <th>Input(A)</th>
+            <th>Output(Y)</th>
+        </tr>
+    </table>
+    </div>
+    <script>
+        const n = document.getElementById('a');
+        const y = document.getElementById('Y');
+        var table = document.getElementById("outputTable");
+        const btn1 = document.getElementById('btn1');
+        const x="1";
+        function f1(){
+        if(n.value === "0"){
+        y.innerHTML="1";
+        var row = table.insertRow(table.rows.length);
+
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = n.value;
+        cell2.innerHTML = y.innerHTML;
+        }
+        else if(n.value === "1"){
+            y.innerHTML="0";
+            var row = table.insertRow(table.rows.length);
+
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = n.value;
+        cell2.innerHTML = y.innerHTML;
+        }
+        else{
+            alert('INVALID');
+        }
+        }
+        btn1.addEventListener('click',f1);
+    </script>
+    <footer style="position: absolute;top: 150%;">
+        <div class="red-style">
+            <p>
+                Department Of Computer Engineering
+            </p>
+            
+             <p>© 2023-24</p>
+           
+           <p>Guided by:  Prof. Pradnya Patil</p>
+         
+           <p>Developed by: Vedant Pillai, Abbas Rajpurwala, Aditya Sahaharkar, Neel Shah</p>
+          
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

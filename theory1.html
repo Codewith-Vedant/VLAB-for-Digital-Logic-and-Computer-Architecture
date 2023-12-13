@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theory</title>
+</head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f2f2f2;
+margin: 0;
+background-image: url('./geometric-abstract-light-blue-background-for-website-wallpapers-bussines-templates-vector.jpg');
+}
+        .red-style{
+        background-color: brown; /* Red color for the top strip */
+        height: 150px; /* Height of the strip */
+        width: 100vw; /* 100% of the viewport width */
+        margin: 0; /* Remove margin to cover entire width */
+        padding: 0; /* Remove padding to cover entire width */
+        text-align: center;
+        position: absolute;
+    }
+        h1 {
+        text-align: left;
+        }
+        .red-strip {
+            background-color: brown; /* Red color for the top strip */
+                    height: 110px; /* Height of the strip */
+                    width: 100vw; /* 100% of the viewport width */
+                    margin: 0; /* Remove margin to cover entire width */
+                    padding: 0; /* Remove padding to cover entire width */
+        }
+        .tab {
+        color: white;
+        text-decoration: none;
+        padding: 20px 20px;
+        border-radius: 111px;
+        transition: background-color 0.3s ease;
+        }
+        .tab1{
+            color: coral;
+        text-decoration: none;
+        padding: 20px 20px;
+        border-radius: 111px;
+        transition: background-color 0.3s ease;
+        background-color: brown;
+        box-shadow: 10px 10px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+        .tab:hover {
+        background-color: #900; /* Change the color on hover */
+        }
+</style>
+<body>
+<div class="red-strip">
+    <img src="./Somaiya1.png" width="300" height="100">
+        <img src="./Trust.png" width="100" height="100" style="position: absolute;left: 93.5%;">
+        <br><br>
+        &nbsp;
+        <a href="Dashboard.html" class="tab">Home</a>
+        &nbsp;
+        <a href="AboutUs.html" class="tab">About Us</a>
+        <br><br><br>
+    <a href="theory1.html" class="tab"><b><u>Theory</u></b></a>
+    &nbsp;
+    <a href="Procedure.html" class="tab">Procedure</a>
+    &nbsp;
+    <a href="simulator.html" class="tab">Simulation</a>
+    &nbsp;
+<a href="Quiz.html" class="tab">Quiz</a>
+</div>
+<body>
+<div class="red-strip"></div>
+    <h1>NAND Gate as Universal Gate</h1>
+    <p>NAND gate is actually a combination of two logic gates: an AND gate followed by a NOT gate. Its output is the complement of the output of an AND gate. This gate can have a minimum of two inputs. By using only NAND gates, we can realize all logic functions: AND, OR, NOT, Ex-OR, Ex-NOR, and NOR. Hence, this gate is also known as a universal gate.</p>
+
+    <h2>NAND Gates as OR Gate</h2>
+    <p>From DeMorgan’s theorems:</p>
+    <p>(A.B)' = A' + B'</p>
+    <p>(A'.B')' = A' + B' = A + B</p>
+    <p>So, by giving the inverted inputs to a NAND gate, we obtain the OR operation at the output.</p>
+    <img src="./1.png" alt="NAND gates as OR gate">
+
+    <h2>NAND Gates as AND Gate</h2>
+    <p>A NAND gate produces the complement of an AND gate. So, if the output of a NAND gate is inverted, the overall output will be that of an AND gate.</p>
+    <p>Y = ((A.B)')' = (A.B)</p>
+    <img src="./2.png" alt="NAND gates as AND gate">
+
+    <h2>Implementing the Simplified Function with NAND Gates Only</h2>
+    <p>We can now start constructing the circuit. First, note that the entire expression is inverted, and we have three terms ANDed. This means that we must use a 3-input NAND gate. Each of the three terms is itself a NAND expression. Finally, negated single terms can be generated with a 2-input NAND gate acting as an inverted. The expression illustrates a circuit using NAND gates only.</p>
+    <p>F = ((C'.B.A)'(D'.C.A)'(C.B'.A)')'</p>
+
+    <h1>NOR Gate as Universal Gate</h1>
+    <p>NOR gate is actually a combination of two logic gates: an OR gate followed by a NOT gate. Its output is the complement of the output of an OR gate. This gate can have a minimum of two inputs, and the output is always one. By using only NOR gates, we can realize all logic functions: AND, OR, NOT, Ex-OR, Ex-NOR, and NAND. Hence, this gate is also called a universal gate.</p>
+
+    <h2>NOR Gates as OR Gate</h2>
+    <p>A NOR produces the complement of an OR gate. So, if the output of a NOR gate is inverted, the overall output will be that of an OR gate.</p>
+    <p>Y = ((A+B)’)’ = (A+B)</p>
+    <img src="./3.png" alt="NOR gates as OR gate">
+
+    <h2>NOR Gates as AND Gate</h2>
+    <p>From DeMorgan’s theorems:</p>
+    <p>(A+B)’ = A’B’</p>
+    <p>(A’+B’)’ = A’’B’’ = AB</p>
+    <p>So, by giving the inverted inputs to a NOR gate, we obtain the AND operation at the output.</p>
+    <img src="./4.png" alt="NOR gates as AND gate">
+
+    <h2>Constructing a Circuit with NOR Gates Only</h2>
+    <p>Designing a circuit with NOR gates only uses the same basic techniques as designing a circuit with NAND gates; that is, the application of deMorgan’s theorem. The only difference between NOR gate design and NAND gate design is that the former must eliminate product terms and the latter must eliminate sum terms.</p>
+    <p>F = (((C.B'.A)+(D.C'.A)+(C.B'.A))')'</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>   
+    <footer>
+        <div class="red-style">
+            <p>
+                Department Of Computer Engineering
+            </p>
+            
+             <p>© 2023-24</p>
+           
+           <p>Guided by:  Prof. Pradnya Patil</p>
+         
+           <p>Developed by: Vedant Pillai, Abbas Rajpurwala, Aditya Sahaharkar, Neel Shah</p>
+          
+        </div>
+    </footer>
+</body>
+</html>

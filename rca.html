@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+    max-width: 100%;
+}
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    background-image: url('./geometric-abstract-light-blue-background-for-website-wallpapers-bussines-templates-vector.jpg');
+    }
+            .red-style{
+            background-color: brown; /* Red color for the top strip */
+            height: 150px; /* Height of the strip */
+            width: 100vw; /* 100% of the viewport width */
+            margin: 0; /* Remove margin to cover entire width */
+            padding: 0; /* Remove padding to cover entire width */
+            text-align: center;
+            position: absolute;
+        }
+            h1 {
+            text-align: left;
+            }
+            .red-strip {
+                background-color: brown; /* Red color for the top strip */
+                        height: 220px; /* Height of the strip */
+                        width: 100vw; /* 100% of the viewport width */
+                        margin: 0; /* Remove margin to cover entire width */
+                        padding: 0; /* Remove padding to cover entire width */
+            }
+            .tab {
+            color: white;
+            text-decoration: none;
+            padding: 20px 20px;
+            border-radius: 111px;
+            transition: background-color 0.3s ease;
+            }
+            .tab1{
+                color: coral;
+            text-decoration: none;
+            padding: 20px 20px;
+            border-radius: 111px;
+            transition: background-color 0.3s ease;
+            background-color: brown;
+            box-shadow: 10px 10px;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            }
+            .tab:hover {
+            background-color: #900; /* Change the color on hover */
+            }
+    </style>
+<body>
+    <div class="red-strip">
+        <img src="./Somaiya1.png" width="300" height="100">
+            <img src="./Trust.png" width="100" height="100" style="position: absolute;left: 93.5%;">
+            <br><br>
+            &nbsp;
+            <a href="Dashboard.html" class="tab">Home</a>
+            &nbsp;
+            <a href="AboutUs.html" class="tab">About Us</a>
+            <br><br><br>
+        <a href="rca.html" class="tab"><b><u>Theory</u></b></a>
+        &nbsp;
+        <a href="Procedure2.html" class="tab">Procedure</a>
+        &nbsp;
+        <a href="rcasim.html" class="tab">Simulation</a>
+        &nbsp;
+    <a href="Quiz2.html" class="tab">Quiz</a>
+    </div>
+    <h1 id="theory">Theory</h1>
+    <p>Arithmetic operations like addition, subtraction, multiplication, division are basic operations to
+        be implemented in digital computers using basic gates like AND, OR, NOR, NAND etc. Among
+        all the arithmetic operations if we can implement addition then it is easy to perform
+        multiplication (by repeated addition), subtraction (by negating one operand) or division (repeated
+        subtraction).</p><br>
+    <p>Half Adders can be used to add two one bit binary numbers. It is also possible to create a logical
+        circuit using multiple full adders to add N-bit binary numbers. Each full adder inputs a Cin,
+        which is the Cout of the previous adder. This kind of adder is a Ripple Carry Adder, since each
+        carry bit &quot;ripples&quot; to the next full adder. The first (and only the first) full adder may be replaced
+        by a half adder. The block diagram of 4-bit Ripple Carry Adder is shown here below:</p>
+        <img src="./RCAA.png" width="500px" height="200px"><br>
+    <p>The layout of ripple carry adder is simple, which allows for fast design time; however, the ripple
+        carry adder is relatively slow, since each full adder must wait for the carry bit to be calculated
+        from the previous full adder. The gate delay can easily be calculated by inspection of the full
+        adder circuit. Each full adder requires three levels of logic. In a 32-bit [ripple carry] adder, there
+        are 32 full adders, so the critical path (worst case) delay is 31 * 2(for carry propagation) + 3(for
+        sum) = 65 gate delays.</p>
+    <p>Design Issues :<br>
+        The corresponding Boolean expressions are given here to construct a ripple carry adder. In the
+        half adder circuit the sum and carry bits are defined as<br><br>
+        sum = A ⊕ B<br>
+        carry = AB<br><br>
+        In the full adder circuit the the Sum and Carry output is defined by inputs A, B and Carryin as<br><br>
+        Sum=ABC + ABC + ABC + ABC<br>
+        Carry=ABC + ABC + ABC + ABC<br><br>
+        Having these we could design the circuit. But,we first check to see if there are any logically
+        equivalent statements that would lead to a more structured equivalent circuit.<br>
+        With a little algebraic manipulation, one can see that<br><br>
+        Sum= ABC + ABC + ABC + ABC<br>
+               = (AB + AB) C + (AB + AB) C<br>
+               = (A ⊕ B) C + (A ⊕ B) C<br>
+               =A ⊕ B ⊕ C<br>
+        Carry= ABC + ABC + ABC + ABC<br>
+               = AB + (AB + AB) C<br>
+               = AB + (A ⊕ B) C</p>
+    <br>
+    <p>The components needed to create 4 bit ripple carry adder is listed here:<br>
+        <ul>
+        <li>4 Full Adders</li>
+        <li>wires to connect</li>
+        <li>LED display to obtain the output</li>
+        </ul>
+    </p><br>
+    Circuit Diagram for Ripple Carry Adder:
+    <br>
+    <img src="./Circuit.png">
+    <br><br><br>
+    <footer>
+        <div class="red-style">
+            <p>
+                Department Of Computer Engineering
+            </p>
+            
+             <p>© 2023-24</p>
+           
+           <p>Guided by:  Prof. Pradnya Patil</p>
+         
+           <p>Developed by: Vedant Pillai, Abbas Rajpurwala, Aditya Sahaharkar, Neel Shah</p>
+          
+        </div>
+    </footer>
+</body>
+</html>
